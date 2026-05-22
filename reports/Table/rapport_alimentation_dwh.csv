@@ -1,0 +1,8 @@
+Table,Nb_lignes
+dim_date,343
+dim_vehicule,325
+dim_conducteur,22
+dim_assureur,7
+dim_localisation,110
+dim_type_sinistre,210
+fact_sinistres,1727103
