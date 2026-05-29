@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_btp_dwh
+    environment:
+      POSTGRES_USER: ${DB_USER:-btp_admin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-btp_password_2024}
+      POSTGRES_DB: ${DB_NAME:-btp_sinistres_dwh}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/01_create_database.sql:/docker-entrypoint-initdb.d/01_create_database.sql
+      - ./sql/02_create_schema.sql:/docker-entrypoint-initdb.d/02_create_schema.sql
+    networks:
+      - btp_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U btp_admin -d btp_sinistres_dwh"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin_btp
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@btp.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin123}
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - btp_network
+
+networks:
+  btp_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
