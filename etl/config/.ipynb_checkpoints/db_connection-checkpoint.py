@@ -16,4 +16,4 @@ DATABASE_URL = (
 
 engine = create_engine(DATABASE_URL)
 
-print("Connexion à PostgreSQL réussie")
+print("Connexion PostgreSQL OK")
