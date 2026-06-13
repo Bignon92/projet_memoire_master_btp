@@ -1,0 +1,276 @@
+2026-05-28 01:01:40 | ERROR | config:test_connection:58 | ❌ Erreur de connexion PostgreSQL: 'utf-8' codec can't decode byte 0xe9 in position 103: invalid continuation byte
+2026-05-28 01:09:18 | INFO | config:test_connection:55 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 14:35:28 | INFO | config:test_connection:55 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 14:42:02 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 14:52:02 | ERROR | extract:extract_auto_sinistres:23 | Erreur extraction auto: [Errno 2] No such file or directory: 'C:\\Users\\ADMIN\\Documents\\projet_memoire_master_btp\\data\\raw\\dataset_analytique.csv'
+2026-05-28 14:52:14 | ERROR | extract:extract_auto_sinistres:23 | Erreur extraction auto: [Errno 2] No such file or directory: 'C:\\Users\\ADMIN\\Documents\\projet_memoire_master_btp\\data\\raw\\dataset_analytique.csv'
+2026-05-28 15:06:43 | ERROR | extract:extract_auto_sinistres:23 | Erreur extraction auto: [Errno 2] No such file or directory: 'C:\\Users\\ADMIN\\Documents\\projet_memoire_master_btp\\data\\raw\\dataset_analytique.csv'
+2026-05-28 15:15:51 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-28 15:15:51 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-28 15:16:40 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-28 15:22:32 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-28 15:22:32 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 2 lignes
+2026-05-28 15:23:45 | INFO | run_etl:main:20 | ============================================================
+2026-05-28 15:23:45 | INFO | run_etl:main:21 | DÉMARRAGE DU PIPELINE ETL - SINISTRES BTP
+2026-05-28 15:23:45 | INFO | run_etl:main:22 | ============================================================
+2026-05-28 15:23:45 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 15:23:45 | INFO | run_etl:main:30 | 🔍 Phase 1: Extraction
+2026-05-28 15:23:45 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-28 15:23:45 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-28 15:23:45 | INFO | run_etl:main:35 | 🔄 Phase 2: Transformation
+2026-05-28 15:23:45 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-28 15:23:45 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 410 lignes
+2026-05-28 15:23:45 | INFO | transform:clean_chantier_data:67 | Nettoyage des données chantier...
+2026-05-28 15:23:45 | INFO | transform:clean_chantier_data:91 | Nettoyage terminé: 166 lignes
+2026-05-28 15:23:46 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\auto_cleaned.parquet
+2026-05-28 15:23:47 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\chantier_cleaned.parquet
+2026-05-28 15:23:47 | INFO | run_etl:main:46 | 💾 Phase 3: Chargement DWH
+2026-05-28 15:23:47 | INFO | load:run_full_load:162 | === DÉBUT CHARGEMENT DWH ===
+2026-05-28 15:23:47 | INFO | load:load_dim_temps:24 | Chargement dim_temps...
+2026-05-28 15:23:47 | INFO | load:load_dim_temps:55 | ✅ 436 dates chargées
+2026-05-28 15:23:47 | INFO | load:load_dim_vehicule:59 | Chargement dim_vehicule...
+2026-05-28 15:23:48 | INFO | load:load_dim_vehicule:85 | ✅ 325 véhicules chargés
+2026-05-28 15:23:48 | INFO | load:load_dim_geographie:89 | Chargement dim_geographie...
+2026-05-28 15:23:48 | ERROR | connection:get_db_connection:30 | Erreur base de données: ERREUR:  il n'existe aucune contrainte unique ou contrainte d'exclusion correspondant à la spécification ON CONFLICT
+
+2026-05-28 15:48:35 | INFO | run_etl:main:20 | ============================================================
+2026-05-28 15:48:35 | INFO | run_etl:main:21 | DÉMARRAGE DU PIPELINE ETL - SINISTRES BTP
+2026-05-28 15:48:35 | INFO | run_etl:main:22 | ============================================================
+2026-05-28 15:48:35 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 15:48:35 | INFO | run_etl:main:30 | 🔍 Phase 1: Extraction
+2026-05-28 15:48:35 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-28 15:48:35 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-28 15:48:35 | INFO | run_etl:main:35 | 🔄 Phase 2: Transformation
+2026-05-28 15:48:35 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-28 15:48:35 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 410 lignes
+2026-05-28 15:48:35 | INFO | transform:clean_chantier_data:67 | Nettoyage des données chantier...
+2026-05-28 15:48:35 | INFO | transform:clean_chantier_data:91 | Nettoyage terminé: 166 lignes
+2026-05-28 15:48:35 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\auto_cleaned.parquet
+2026-05-28 15:48:36 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\chantier_cleaned.parquet
+2026-05-28 15:48:36 | INFO | run_etl:main:46 | 💾 Phase 3: Chargement DWH
+2026-05-28 15:48:36 | INFO | load:run_full_load:162 | === DÉBUT CHARGEMENT DWH ===
+2026-05-28 15:48:36 | INFO | load:load_dim_temps:24 | Chargement dim_temps...
+2026-05-28 15:48:36 | INFO | load:load_dim_temps:55 | ✅ 436 dates chargées
+2026-05-28 15:48:36 | INFO | load:load_dim_vehicule:59 | Chargement dim_vehicule...
+2026-05-28 15:48:36 | INFO | load:load_dim_vehicule:85 | ✅ 325 véhicules chargés
+2026-05-28 15:48:36 | INFO | load:load_dim_geographie:89 | Chargement dim_geographie...
+2026-05-28 15:48:37 | ERROR | connection:get_db_connection:30 | Erreur base de données: ERREUR:  il n'existe aucune contrainte unique ou contrainte d'exclusion correspondant à la spécification ON CONFLICT
+
+2026-05-28 15:59:16 | INFO | run_etl:main:20 | ============================================================
+2026-05-28 15:59:16 | INFO | run_etl:main:21 | DÉMARRAGE DU PIPELINE ETL - SINISTRES BTP
+2026-05-28 15:59:16 | INFO | run_etl:main:22 | ============================================================
+2026-05-28 15:59:16 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 15:59:16 | INFO | run_etl:main:30 | 🔍 Phase 1: Extraction
+2026-05-28 15:59:17 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-28 15:59:17 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-28 15:59:17 | INFO | run_etl:main:35 | 🔄 Phase 2: Transformation
+2026-05-28 15:59:17 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-28 15:59:17 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 410 lignes
+2026-05-28 15:59:17 | INFO | transform:clean_chantier_data:67 | Nettoyage des données chantier...
+2026-05-28 15:59:17 | INFO | transform:clean_chantier_data:91 | Nettoyage terminé: 166 lignes
+2026-05-28 15:59:17 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\auto_cleaned.parquet
+2026-05-28 15:59:17 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\chantier_cleaned.parquet
+2026-05-28 15:59:17 | INFO | run_etl:main:46 | 💾 Phase 3: Chargement DWH
+2026-05-28 15:59:17 | INFO | load:run_full_load:162 | === DÉBUT CHARGEMENT DWH ===
+2026-05-28 15:59:17 | INFO | load:load_dim_temps:24 | Chargement dim_temps...
+2026-05-28 15:59:17 | INFO | load:load_dim_temps:55 | ✅ 436 dates chargées
+2026-05-28 15:59:17 | INFO | load:load_dim_vehicule:59 | Chargement dim_vehicule...
+2026-05-28 15:59:18 | INFO | load:load_dim_vehicule:85 | ✅ 325 véhicules chargés
+2026-05-28 15:59:18 | INFO | load:load_dim_geographie:89 | Chargement dim_geographie...
+2026-05-28 15:59:18 | INFO | load:load_dim_geographie:106 | ✅ 12 départements chargés
+2026-05-28 15:59:18 | INFO | load:load_fact_sinistres_auto:110 | Chargement fait_sinistres (auto)...
+2026-05-28 15:59:18 | ERROR | connection:get_db_connection:30 | Erreur base de données: ERREUR:  syntaxe en entrée invalide pour le type integer : « AUTO-2022-001 »
+LINE 7:                         ) VALUES ('AUTO-2022-001', 20220717,...
+                                          ^
+
+2026-05-28 16:45:21 | INFO | run_etl:main:20 | ============================================================
+2026-05-28 16:45:21 | INFO | run_etl:main:21 | DÉMARRAGE DU PIPELINE ETL - SINISTRES BTP
+2026-05-28 16:45:21 | INFO | run_etl:main:22 | ============================================================
+2026-05-28 16:45:21 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 16:45:21 | INFO | run_etl:main:30 | 🔍 Phase 1: Extraction
+2026-05-28 16:45:21 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-28 16:45:21 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-28 16:45:21 | INFO | run_etl:main:35 | 🔄 Phase 2: Transformation
+2026-05-28 16:45:21 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-28 16:45:21 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 410 lignes
+2026-05-28 16:45:21 | INFO | transform:clean_chantier_data:67 | Nettoyage des données chantier...
+2026-05-28 16:45:21 | INFO | transform:clean_chantier_data:91 | Nettoyage terminé: 166 lignes
+2026-05-28 16:45:21 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\auto_cleaned.parquet
+2026-05-28 16:45:21 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\chantier_cleaned.parquet
+2026-05-28 16:45:21 | INFO | run_etl:main:46 | 💾 Phase 3: Chargement DWH
+2026-05-28 16:45:21 | INFO | load:run_full_load:162 | === DÉBUT CHARGEMENT DWH ===
+2026-05-28 16:45:21 | INFO | load:load_dim_temps:24 | Chargement dim_temps...
+2026-05-28 16:45:21 | INFO | load:load_dim_temps:55 | ✅ 436 dates chargées
+2026-05-28 16:45:21 | INFO | load:load_dim_vehicule:59 | Chargement dim_vehicule...
+2026-05-28 16:45:22 | INFO | load:load_dim_vehicule:85 | ✅ 325 véhicules chargés
+2026-05-28 16:45:22 | INFO | load:load_dim_geographie:89 | Chargement dim_geographie...
+2026-05-28 16:45:22 | INFO | load:load_dim_geographie:106 | ✅ 12 départements chargés
+2026-05-28 16:45:22 | INFO | load:load_fact_sinistres_auto:110 | Chargement fait_sinistres (auto)...
+2026-05-28 16:45:22 | ERROR | connection:get_db_connection:30 | Erreur base de données: ERREUR:  une instruction insert ou update sur la table « fait_sinistres » viole la contrainte de clé
+étrangère « fait_sinistres_id_assureur_fkey »
+DETAIL:  La clé (id_assureur)=(1) n'est pas présente dans la table « dim_assureur ».
+
+2026-05-28 17:30:51 | INFO | run_etl:main:20 | ============================================================
+2026-05-28 17:30:51 | INFO | run_etl:main:21 | DÉMARRAGE DU PIPELINE ETL - SINISTRES BTP
+2026-05-28 17:30:51 | INFO | run_etl:main:22 | ============================================================
+2026-05-28 17:30:51 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 17:30:51 | INFO | run_etl:main:30 | 🔍 Phase 1: Extraction
+2026-05-28 17:30:52 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-28 17:30:52 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-28 17:30:52 | INFO | run_etl:main:35 | 🔄 Phase 2: Transformation
+2026-05-28 17:30:52 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-28 17:30:52 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 410 lignes
+2026-05-28 17:30:52 | INFO | transform:clean_chantier_data:67 | Nettoyage des données chantier...
+2026-05-28 17:30:52 | INFO | transform:clean_chantier_data:91 | Nettoyage terminé: 166 lignes
+2026-05-28 17:30:53 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\auto_cleaned.parquet
+2026-05-28 17:30:53 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\chantier_cleaned.parquet
+2026-05-28 17:30:53 | INFO | run_etl:main:46 | 💾 Phase 3: Chargement DWH
+2026-05-28 17:30:53 | INFO | load:run_full_load:266 | === DÉBUT CHARGEMENT DWH ===
+2026-05-28 17:30:53 | INFO | load:load_dim_temps:24 | Chargement dim_temps...
+2026-05-28 17:30:53 | INFO | load:load_dim_temps:48 | ✅ 436 dates chargées
+2026-05-28 17:30:53 | INFO | load:load_dim_vehicule:52 | Chargement dim_vehicule...
+2026-05-28 17:30:54 | INFO | load:load_dim_vehicule:77 | ✅ 325 véhicules chargés
+2026-05-28 17:30:54 | INFO | load:load_dim_assureur:81 | Chargement dim_assureur...
+2026-05-28 17:30:54 | ERROR | connection:get_db_connection:30 | Erreur base de données: ERREUR:  il n'existe aucune contrainte unique ou contrainte d'exclusion correspondant à la spécification ON CONFLICT
+
+2026-05-28 17:36:10 | INFO | run_etl:main:20 | ============================================================
+2026-05-28 17:36:10 | INFO | run_etl:main:21 | DÉMARRAGE DU PIPELINE ETL - SINISTRES BTP
+2026-05-28 17:36:10 | INFO | run_etl:main:22 | ============================================================
+2026-05-28 17:36:10 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 17:36:10 | INFO | run_etl:main:30 | 🔍 Phase 1: Extraction
+2026-05-28 17:36:10 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-28 17:36:10 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-28 17:36:11 | INFO | run_etl:main:35 | 🔄 Phase 2: Transformation
+2026-05-28 17:36:11 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-28 17:36:11 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 410 lignes
+2026-05-28 17:36:11 | INFO | transform:clean_chantier_data:67 | Nettoyage des données chantier...
+2026-05-28 17:36:11 | INFO | transform:clean_chantier_data:91 | Nettoyage terminé: 166 lignes
+2026-05-28 17:36:11 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\auto_cleaned.parquet
+2026-05-28 17:36:11 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\chantier_cleaned.parquet
+2026-05-28 17:36:11 | INFO | run_etl:main:46 | 💾 Phase 3: Chargement DWH
+2026-05-28 17:36:11 | INFO | load:run_full_load:266 | === DÉBUT CHARGEMENT DWH ===
+2026-05-28 17:36:11 | INFO | load:load_dim_temps:24 | Chargement dim_temps...
+2026-05-28 17:36:11 | INFO | load:load_dim_temps:48 | ✅ 436 dates chargées
+2026-05-28 17:36:11 | INFO | load:load_dim_vehicule:52 | Chargement dim_vehicule...
+2026-05-28 17:36:12 | INFO | load:load_dim_vehicule:77 | ✅ 325 véhicules chargés
+2026-05-28 17:36:12 | INFO | load:load_dim_assureur:81 | Chargement dim_assureur...
+2026-05-28 17:36:12 | INFO | load:load_dim_assureur:95 | ✅ 7 assureurs chargés
+2026-05-28 17:36:12 | INFO | load:load_dim_geographie:99 | Chargement dim_geographie...
+2026-05-28 17:36:12 | INFO | load:load_dim_geographie:115 | ✅ 12 départements chargés
+2026-05-28 17:36:12 | INFO | load:load_dim_conducteur:120 | Chargement dim_conducteur...
+2026-05-28 17:36:12 | ERROR | connection:get_db_connection:30 | Erreur base de données: ERREUR:  entier en dehors des limites
+
+2026-05-28 17:47:49 | INFO | run_etl:main:20 | ============================================================
+2026-05-28 17:47:49 | INFO | run_etl:main:21 | DÉMARRAGE DU PIPELINE ETL - SINISTRES BTP
+2026-05-28 17:47:49 | INFO | run_etl:main:22 | ============================================================
+2026-05-28 17:47:49 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 17:47:49 | INFO | run_etl:main:30 | 🔍 Phase 1: Extraction
+2026-05-28 17:47:49 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-28 17:47:49 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-28 17:47:49 | INFO | run_etl:main:35 | 🔄 Phase 2: Transformation
+2026-05-28 17:47:49 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-28 17:47:49 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 410 lignes
+2026-05-28 17:47:49 | INFO | transform:clean_chantier_data:67 | Nettoyage des données chantier...
+2026-05-28 17:47:49 | INFO | transform:clean_chantier_data:91 | Nettoyage terminé: 166 lignes
+2026-05-28 17:47:49 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\auto_cleaned.parquet
+2026-05-28 17:47:49 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\chantier_cleaned.parquet
+2026-05-28 17:47:49 | INFO | run_etl:main:46 | 💾 Phase 3: Chargement DWH
+2026-05-28 17:47:49 | INFO | load:run_full_load:267 | === DÉBUT CHARGEMENT DWH ===
+2026-05-28 17:47:49 | INFO | load:load_dim_temps:25 | Chargement dim_temps...
+2026-05-28 17:47:50 | INFO | load:load_dim_temps:49 | ✅ 436 dates chargées
+2026-05-28 17:47:50 | INFO | load:load_dim_vehicule:53 | Chargement dim_vehicule...
+2026-05-28 17:47:50 | INFO | load:load_dim_vehicule:78 | ✅ 325 véhicules chargés
+2026-05-28 17:47:50 | INFO | load:load_dim_assureur:82 | Chargement dim_assureur...
+2026-05-28 17:47:50 | INFO | load:load_dim_assureur:96 | ✅ 7 assureurs chargés
+2026-05-28 17:47:50 | INFO | load:load_dim_geographie:100 | Chargement dim_geographie...
+2026-05-28 17:47:50 | INFO | load:load_dim_geographie:116 | ✅ 12 départements chargés
+2026-05-28 17:47:50 | INFO | load:load_dim_conducteur:121 | Chargement dim_conducteur...
+2026-05-28 17:47:51 | INFO | load:load_dim_conducteur:144 | ✅ 60 conducteurs chargés
+2026-05-28 17:47:51 | INFO | load:load_dim_chantier:149 | Chargement dim_chantier...
+2026-05-28 17:47:51 | INFO | load:load_dim_chantier:175 | ✅ Données chantier chargées
+2026-05-28 17:47:51 | INFO | load:load_dim_sinistre_type:180 | Chargement dim_sinistre_type...
+2026-05-28 17:47:51 | ERROR | connection:get_db_connection:30 | Erreur base de données: ERREUR:  il n'existe aucune contrainte unique ou contrainte d'exclusion correspondant à la spécification ON CONFLICT
+
+2026-05-28 23:55:04 | INFO | run_etl:main:20 | ============================================================
+2026-05-28 23:55:04 | INFO | run_etl:main:21 | DÉMARRAGE DU PIPELINE ETL - SINISTRES BTP
+2026-05-28 23:55:04 | INFO | run_etl:main:22 | ============================================================
+2026-05-28 23:55:04 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-28 23:55:04 | INFO | run_etl:main:30 | 🔍 Phase 1: Extraction
+2026-05-28 23:55:04 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-28 23:55:04 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-28 23:55:04 | INFO | run_etl:main:35 | 🔄 Phase 2: Transformation
+2026-05-28 23:55:04 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-28 23:55:04 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 410 lignes
+2026-05-28 23:55:04 | INFO | transform:clean_chantier_data:67 | Nettoyage des données chantier...
+2026-05-28 23:55:04 | INFO | transform:clean_chantier_data:91 | Nettoyage terminé: 166 lignes
+2026-05-28 23:55:05 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\auto_cleaned.parquet
+2026-05-28 23:55:05 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\chantier_cleaned.parquet
+2026-05-28 23:55:05 | INFO | run_etl:main:46 | 💾 Phase 3: Chargement DWH
+2026-05-28 23:55:05 | INFO | load:run_full_load:267 | === DÉBUT CHARGEMENT DWH ===
+2026-05-28 23:55:05 | INFO | load:load_dim_temps:25 | Chargement dim_temps...
+2026-05-28 23:55:05 | INFO | load:load_dim_temps:49 | ✅ 436 dates chargées
+2026-05-28 23:55:05 | INFO | load:load_dim_vehicule:53 | Chargement dim_vehicule...
+2026-05-28 23:55:06 | INFO | load:load_dim_vehicule:78 | ✅ 325 véhicules chargés
+2026-05-28 23:55:06 | INFO | load:load_dim_assureur:82 | Chargement dim_assureur...
+2026-05-28 23:55:06 | ERROR | connection:get_db_connection:30 | Erreur base de données: 'type_contrat'
+2026-05-29 00:01:26 | INFO | run_etl:main:20 | ============================================================
+2026-05-29 00:01:26 | INFO | run_etl:main:21 | DÉMARRAGE DU PIPELINE ETL - SINISTRES BTP
+2026-05-29 00:01:26 | INFO | run_etl:main:22 | ============================================================
+2026-05-29 00:01:26 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-29 00:01:26 | INFO | run_etl:main:30 | 🔍 Phase 1: Extraction
+2026-05-29 00:01:26 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-29 00:01:26 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-29 00:01:26 | INFO | run_etl:main:35 | 🔄 Phase 2: Transformation
+2026-05-29 00:01:26 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-29 00:01:26 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 410 lignes
+2026-05-29 00:01:26 | INFO | transform:clean_chantier_data:67 | Nettoyage des données chantier...
+2026-05-29 00:01:26 | INFO | transform:clean_chantier_data:91 | Nettoyage terminé: 166 lignes
+2026-05-29 00:01:26 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\auto_cleaned.parquet
+2026-05-29 00:01:26 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\chantier_cleaned.parquet
+2026-05-29 00:01:26 | INFO | run_etl:main:46 | 💾 Phase 3: Chargement DWH
+2026-05-29 00:01:26 | INFO | load:run_full_load:296 | === DÉBUT CHARGEMENT DWH ===
+2026-05-29 00:01:26 | INFO | load:load_dim_temps:25 | Chargement dim_temps...
+2026-05-29 00:01:27 | INFO | load:load_dim_temps:49 | ✅ 436 dates chargées
+2026-05-29 00:01:27 | INFO | load:load_dim_vehicule:53 | Chargement dim_vehicule...
+2026-05-29 00:01:27 | INFO | load:load_dim_vehicule:78 | ✅ 325 véhicules chargés
+2026-05-29 00:01:27 | INFO | load:load_dim_assureur:83 | Chargement dim_assureur...
+2026-05-29 00:01:28 | ERROR | connection:get_db_connection:30 | Erreur base de données: ERREUR:  la colonne « taux_franchise » de la relation « dim_assureur » n'existe pas
+LINE 5:                             taux_franchise,
+                                    ^
+
+2026-05-29 00:14:39 | INFO | run_etl:main:20 | ============================================================
+2026-05-29 00:14:39 | INFO | run_etl:main:21 | DÉMARRAGE DU PIPELINE ETL - SINISTRES BTP
+2026-05-29 00:14:39 | INFO | run_etl:main:22 | ============================================================
+2026-05-29 00:14:39 | INFO | config:test_connection:52 | ✅ Connexion PostgreSQL établie avec succès
+2026-05-29 00:14:39 | INFO | run_etl:main:30 | 🔍 Phase 1: Extraction
+2026-05-29 00:14:39 | INFO | extract:extract_auto_sinistres:20 | ✅ 410 sinistres auto extraits
+2026-05-29 00:14:39 | INFO | extract:extract_trc_sinistres:31 | ✅ 166 sinistres chantier extraits
+2026-05-29 00:14:39 | INFO | run_etl:main:35 | 🔄 Phase 2: Transformation
+2026-05-29 00:14:39 | INFO | transform:clean_auto_data:18 | Nettoyage des données auto...
+2026-05-29 00:14:39 | INFO | transform:clean_auto_data:62 | Nettoyage terminé: 410 lignes
+2026-05-29 00:14:39 | INFO | transform:clean_chantier_data:67 | Nettoyage des données chantier...
+2026-05-29 00:14:39 | INFO | transform:clean_chantier_data:91 | Nettoyage terminé: 166 lignes
+2026-05-29 00:14:40 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\auto_cleaned.parquet
+2026-05-29 00:14:40 | INFO | transform:save_processed_data:98 | ✅ Données sauvegardées: C:\Users\ADMIN\Documents\projet_memoire_master_btp\data\processed\chantier_cleaned.parquet
+2026-05-29 00:14:40 | INFO | run_etl:main:46 | 💾 Phase 3: Chargement DWH
+2026-05-29 00:14:40 | INFO | load:run_full_load:296 | === DÉBUT CHARGEMENT DWH ===
+2026-05-29 00:14:40 | INFO | load:load_dim_temps:25 | Chargement dim_temps...
+2026-05-29 00:14:40 | INFO | load:load_dim_temps:49 | ✅ 436 dates chargées
+2026-05-29 00:14:40 | INFO | load:load_dim_vehicule:53 | Chargement dim_vehicule...
+2026-05-29 00:14:41 | INFO | load:load_dim_vehicule:78 | ✅ 325 véhicules chargés
+2026-05-29 00:14:41 | INFO | load:load_dim_assureur:83 | Chargement dim_assureur...
+2026-05-29 00:14:41 | INFO | load:load_dim_assureur:125 | ✅ 7 assureurs chargés
+2026-05-29 00:14:41 | INFO | load:load_dim_geographie:129 | Chargement dim_geographie...
+2026-05-29 00:14:41 | INFO | load:load_dim_geographie:145 | ✅ 12 départements chargés
+2026-05-29 00:14:41 | INFO | load:load_dim_conducteur:150 | Chargement dim_conducteur...
+2026-05-29 00:14:41 | INFO | load:load_dim_conducteur:173 | ✅ 60 conducteurs chargés
+2026-05-29 00:14:41 | INFO | load:load_dim_chantier:178 | Chargement dim_chantier...
+2026-05-29 00:14:41 | INFO | load:load_dim_chantier:204 | ✅ Données chantier chargées
+2026-05-29 00:14:41 | INFO | load:load_dim_sinistre_type:209 | Chargement dim_sinistre_type...
+2026-05-29 00:14:42 | INFO | load:load_dim_sinistre_type:226 | ✅ 12 types de sinistres chargés
+2026-05-29 00:14:42 | INFO | load:load_fact_sinistres_auto:230 | Chargement fait_sinistres (auto)...
+2026-05-29 00:14:43 | INFO | load:load_fact_sinistres_auto:292 | ✅ 410 sinistres auto chargés
+2026-05-29 00:14:43 | INFO | load:run_full_load:310 | === CHARGEMENT DWH TERMINÉ ===
+2026-05-29 00:14:43 | INFO | run_etl:main:50 | ============================================================
+2026-05-29 00:14:43 | INFO | run_etl:main:51 | ✅ PIPELINE ETL TERMINÉ AVEC SUCCÈS
+2026-05-29 00:14:43 | INFO | run_etl:main:52 | ============================================================
